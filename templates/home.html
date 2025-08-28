@@ -1,0 +1,10 @@
+from flask import Flask, render_template, request, redirect, url_for, session, flash
+
+app = Flask(__name__)
+app.secret_key = "mysecretkey"   # needed for sessions
+
+# Fake user credentials (for demo)
+USER = {"username": "admin", "password": "1234"}
+
+@app.route("/")
+def home

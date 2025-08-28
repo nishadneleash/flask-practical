@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+  {% if page == "about" %}
+    <h1>{{ "about page" | caps }}</h1>
+    <p>This uses templates + static CSS + custom Jinja filter.</p>
+  {% else %}
+    <h1>{{ "welcome to flask" | caps }}</h1>
+    <p>Use the header links to try each feature.</p>
+  {% endif %}
+{% endblock %}

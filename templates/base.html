@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}Flask Practical{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header>
+    <a href="{{ url_for('home') }}">Home</a> ·
+    <a href="{{ url_for('about') }}">About</a> ·
+    <a href="{{ url_for('form') }}">Form</a> ·
+    <a href="{{ url_for('links') }}">Links</a> ·
+    <a href="{{ url_for('api_ping') }}">API</a>
+  </header>
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+</body>
+</html>
